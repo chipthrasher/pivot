@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    /* Apparently this is a best practice! */
+}
+
+:root {
+    --color: #dd2525;
+}
+
+body {
+    margin: 0;
+    background: black;
+
+    font-family: "Inter", sans-serif;
+}
+
+.fade {
+    font-size: 0.8em;
+    opacity: 0.6;
+}
+
+.word-wrapper {
+    display: inline-block;
+    height: 1em;
+    /* overflow: hidden; */
+    /* vertical-align: bottom; */
+    position: relative;
+}
+
+#rotating-word {
+    display: inline-block;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    will-change: transform, opacity;
+}
+
+#slideshow {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+
+    opacity: 30%;
+    filter: saturate(1.3);
+}
+
+#container {
+    color: white;
+    position: relative;
+}
+
+.content {
+    width: 100%;
+    padding: 3rem;
+}
+
+.fullpage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #left {
+    font-size: 0.8em;
+    filter: brightness(0.6);
+}
+
+header #center {
+    font-weight: 600;
+    font-size: 1.5em;
+    transition: transform 0.2s;
+}
+
+header #center:hover {
+    transform: rotate(5deg);
+}
+
+header #right {
+    display: flex;
+    gap: 1em;
+}
+
+header.notice {
+    display: block;
+    text-align: center;
+    padding: 1em;
+    font-size: 0.8em;
+    background: #cc9c00;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+main {
+    flex-grow: 1;
+    max-width: 70rem;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+footer {
+    padding: 3em;
+    text-align: center;
+}
+
+footer div {
+    margin-bottom: 1em;
+}
+
+.title {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.subtitle {
+    filter: brightness(0.6);
+    font-weight: 500;
+    margin-bottom: 0.5em;
+}
+
+main div:has(button) {
+    margin: 2em 0;
+}
+
+main button {
+    margin: 1em 0;
+}
+
+button {
+    padding: 0.5em 1em;
+    display: inline;
+
+    border: none;
+    background: white;
+
+    border-radius: 1em;
+
+    color: black;
+    cursor: pointer;
+
+
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    transition: 0.2s all;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    padding: 2px 0;
+}
+
+a:hover {
+    filter: brightness(0.8);
+}
+
+a:has(> button) {
+    margin: 2em 0;
+}
+
+.bg {
+    background: white;
+    color: black;
+    padding: 3rem 3rem 0 3rem;
+}
+
+/* On big screens, show reviews on the right side */
+@media screen and (min-width: 800px) {
+    .columns {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .columns>main {
+        flex-grow: 1;
+    }
+
+    .columns>section {
+        flex-grow: 0;
+        width: 30rem;
+    }
+}
+
+
+.bg button {
+    background: black;
+    color: white;
+}
+
+.bg main {
+    line-height: 1.5;
+}
+
+.bg main div:not(.faq-section div) {
+    margin-bottom: 1em;
+}
+
+.bg a.link {
+    border-bottom: 2px solid black;
+    transition: all 0.2s;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.bg a.link:hover {
+    border-bottom-color: transparent;
+}
+
+.bg footer {
+    font-size: 0.8em;
+}
+
+/* FAQ */
+
+.faq-section {}
+
+.faq-section h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.faq-item {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-item a.link {
+    border-bottom: 2px solid #555;
+}
+
+.faq-question {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.faq-toggle {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    color: #555;
+    font-size: 0.9em;
+    opacity: 0;
+}
+
+.faq-item.active .faq-answer {
+    padding: 2rem 0;
+    max-height: 500px;
+    opacity: 1;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+/* Highlighting the contact button on-scroll */
+
+@keyframes highlight {
+    0% {
+        background-color: transparent;
+    }
+
+    50% {
+        background-color: rgba(255, 213, 0, 0.3);
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+#contact {
+    transition: background-color 0.5s ease;
+}
+
+.highlight {
+    animation: highlight 1.5s ease;
+}
+
+/* Reviews */
+
+.review-section {
+    max-width: 50rem;
+    line-height: 1.4;
+
+    /* Horizontally center everything inside */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* All text (headings) in review section */
+.review-section h3, .review-section h5 {
+    font-weight: 500;
+}
+
+/* Control spacing between "See more reviews" and stars */
+.review-section h5 { 
+    margin-bottom: 0.75em;
+}
+.review {
+    background: #f8f8f8;
+    color: #333;
+    padding: 2em;
+    border-radius: 1em;
+
+    font-size: 0.8em;
+
+    margin-bottom: 2em;
+}
+
+.review-text {
+    margin-bottom: 1em;
+}
+
+.review-author {
+    color: #666;
+    font-style: italic;
+}
+
+.stars {
+    cursor: pointer;
+}
