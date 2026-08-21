@@ -134,7 +134,8 @@ footer div {
     margin-bottom: 0.5em;
 }
 
-main div:has(button) {
+/* this kind of a workaround, basically the divs that are JUST a button needed some more space */
+main div:has(button):not(.faq-section div) {
     margin: 2em 0;
 }
 
@@ -234,9 +235,7 @@ a:has(> button) {
 
 /* FAQ */
 
-.faq-section {
-    margin: 3rem 0;
-}
+.faq-section {}
 
 .faq-section h2 {
     margin-bottom: 1.5rem;
@@ -292,6 +291,7 @@ a:has(> button) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 20em));
     justify-content: center;
+    align-items: start;
     gap: 3rem;
     text-align: center;
     margin: 3rem 0;
@@ -299,7 +299,7 @@ a:has(> button) {
 
 .team img {
     width: 100%;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 9 / 10;
     object-fit: cover;
     border-radius: 0.5em;
 }
