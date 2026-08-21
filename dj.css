@@ -311,6 +311,20 @@ a:has(> button) {
     margin: 0;
 }
 
+.team-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35em;
+    color: #555;
+    font-size: 0.9em;
+    margin-bottom: 0.75em;
+}
+
+.team-location svg {
+    flex-shrink: 0;
+}
+
 .team-tags {
     display: flex;
     flex-wrap: wrap;
