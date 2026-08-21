@@ -345,6 +345,11 @@ a:has(> button) {
     border-color: #e3acac;
 }
 
+.team-tag-money {
+    color: #6bca7e;
+    border-color: #aee3ac;
+}
+
 /* Highlighting the contact button on-scroll */
 
 @keyframes highlight {
