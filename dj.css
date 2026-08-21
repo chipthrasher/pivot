@@ -234,7 +234,9 @@ a:has(> button) {
 
 /* FAQ */
 
-.faq-section {}
+.faq-section {
+    margin: 3rem 0;
+}
 
 .faq-section h2 {
     margin-bottom: 1.5rem;
@@ -282,6 +284,34 @@ a:has(> button) {
 
 .faq-item.active .faq-toggle {
     transform: rotate(45deg);
+}
+
+/* Meet the team */
+
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 20em));
+    justify-content: center;
+    gap: 3rem;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.team img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 0.5em;
+}
+
+.team h3 {
+    margin: 1em 0 0.5em;
+}
+
+.team p {
+    margin: 0;
+    color: #555;
+    font-size: 0.9em;
 }
 
 /* Highlighting the contact button on-scroll */

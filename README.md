@@ -1,2 +1,3 @@
-# pivot
-pivotdj.com
+# Pivot DJ
+
+The website for Pivot DJ LLC
