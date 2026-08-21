@@ -289,7 +289,7 @@ a:has(> button) {
 
 .team {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 18em));
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 15em));
     justify-content: center;
     gap: 3rem;
     text-align: center;
