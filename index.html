@@ -23,12 +23,12 @@
     <meta name="copyright" content="Pivot DJ LLC">
     <meta name="robots" content="index,follow">
     <link rel="stylesheet" href="/dj.css">
-    <link rel="icon" href="/favicon-dj.png" type="image/png">
-    <link rel="apple-touch-icon" href="/favicon-dj.png">
+    <link rel="icon" href="/assets/favicon-dj.png" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/favicon-dj.png">
 </head>
 
 <body>
-    <img id="slideshow" src="/dj0.jpg" alt="Slideshow image">
+    <img id="slideshow" src="/assets/dj0.jpg" alt="Slideshow image">
 
     <div id="container">
         <div class="fullpage">
@@ -40,16 +40,9 @@
                     <!-- <a href="/">&larr; Home</a> -->
                 </div>
                 <div id="center">
-                    <a href="/dj">PIVOT DJ</a>
+                    <a href="/">PIVOT DJ</a>
                 </div>
                 <div id="right">
-                    <a href="https://instagram.com/discjockeychip"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg></a></svg></a>
                     <a href="mailto:contact@pivotdj.com"><svg xmlns="http://www.w3.org/2000/svg"
                             width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -78,11 +71,11 @@
                     <div>
                         <!-- <div style="opacity: 0.5; font-style: italic">Reviews coming soon.</div> -->
                         <div class="stars" data-scroll-to=".review-section">
-                            <img src="/star.svg" width="24" height="24" alt="">
-                            <img src="/star.svg" width="24" height="24" alt="">
-                            <img src="/star.svg" width="24" height="24" alt="">
-                            <img src="/star.svg" width="24" height="24" alt="">
-                            <img src="/star.svg" width="24" height="24" alt="">
+                            <img src="/assets/star.svg" width="24" height="24" alt="">
+                            <img src="/assets/star.svg" width="24" height="24" alt="">
+                            <img src="/assets/star.svg" width="24" height="24" alt="">
+                            <img src="/assets/star.svg" width="24" height="24" alt="">
+                            <img src="/assets/star.svg" width="24" height="24" alt="">
                         </div>
                         <div>
                             We provide affordable, high-quality entertainment for all types of events.<br>
@@ -165,6 +158,12 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="faq-section">
+                            <h2>Meet the Team</h2>
+                            
+                            <!-- Todo: 2 vertical cards with images, name below, description below -->
+                             
+                        </div>
                         <br>
                         <div id="contact">
                             <a href="mailto:contact@pivotdj.com"><button>Contact us</button></a>&nbsp; with your
@@ -228,11 +227,11 @@
                         </symbol>
                     </svg>
                     <div class="stars" style="color:#ffd500">
-                        <img src="/star.svg" width="20" height="20" alt="">
-                        <img src="/star.svg" width="20" height="20" alt="">
-                        <img src="/star.svg" width="20" height="20" alt="">
-                        <img src="/star.svg" width="20" height="20" alt="">
-                        <img src="/star.svg" width="20" height="20" alt="">
+                        <img src="/assets/star.svg" width="20" height="20" alt="">
+                        <img src="/assets/star.svg" width="20" height="20" alt="">
+                        <img src="/assets/star.svg" width="20" height="20" alt="">
+                        <img src="/assets/star.svg" width="20" height="20" alt="">
+                        <img src="/assets/star.svg" width="20" height="20" alt="">
                     </div>
                 </section>
                 
@@ -243,7 +242,7 @@
                 <div class="footer-columns">
                     <a target="_blank"
                         href="https://www.theknot.com/marketplace/redirect-2095259?utm_source=vendor_website&utm_medium=banner&utm_term=2c497279-8a3f-4883-9892-98532b656bb8&utm_campaign=vendor_badge_assets"><img
-                            alt="As Seen on The Knot" border="0" src="/knot.png" width="100"></a>
+                            alt="As Seen on The Knot" border="0" src="/assets/knot.png" width="100"></a>
                     <a rel='nofollow' target='_blank'
                         href='https://www.weddingwire.com/biz/dj-chip/22a6bf3225f4427c.html'
                         title='weddingwire.com'><img alt='weddingwire.com'
@@ -289,7 +288,7 @@
 
             // Slideshow
 
-            const images = Array.from({ length: 7 }, (_, i) => `/dj${i}.jpg`);
+            const images = Array.from({ length: 7 }, (_, i) => `/assets/dj${i}.jpg`);
             const delay = 5000; // 5 seconds
             const preloaded = [];
 
