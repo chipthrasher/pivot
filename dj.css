@@ -335,9 +335,14 @@ a:has(> button) {
 .team-tag {
     border: 1px solid #ddd;
     border-radius: 1em;
-    padding: 0.25em 0.75em;
+    padding: 0.2em 0.6em;
     color: #555;
-    font-size: 0.9em;
+    font-size: 0.7em;
+}
+
+.team-tag-warning {
+    color: #ca6b6b;
+    border-color: #e3acac;
 }
 
 /* Highlighting the contact button on-scroll */
