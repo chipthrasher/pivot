@@ -187,7 +187,7 @@ a:has(> button) {
 }
 
 /* On big screens, show reviews on the right side */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
     .columns {
         display: flex;
         align-items: flex-start;
@@ -289,9 +289,8 @@ a:has(> button) {
 
 .team {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 20em));
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 18em));
     justify-content: center;
-    align-items: start;
     gap: 3rem;
     text-align: center;
     margin: 3rem 0;
@@ -310,6 +309,19 @@ a:has(> button) {
 
 .team p {
     margin: 0;
+}
+
+.team-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.team-tag {
+    border: 1px solid #ddd;
+    border-radius: 1em;
+    padding: 0.25em 0.75em;
     color: #555;
     font-size: 0.9em;
 }
