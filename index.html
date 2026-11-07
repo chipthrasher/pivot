@@ -232,7 +232,7 @@
                         <br>
                         <div id="contact">
                             <a href="mailto:contact@pivotdj.com"><button>Contact us</button></a>&nbsp; with your
-                            questions!
+                            questions, or <a class="link" data-scroll-to=".team">give us a call</a> (free)!
                         </div>
                     </div>
                 </main>
@@ -405,6 +405,14 @@
                             // Remove the class after animation completes
                             setTimeout(() => {
                                 target.children[0].classList.remove('highlight');
+                            }, 1500);
+                        }
+                        // Add highlight animation if it's scrolling to meet the team
+                        if (element.dataset.scrollTo === '.team') {
+                            target.classList.add('highlight');
+                            // Remove the class after animation completes
+                            setTimeout(() => {
+                                target.classList.remove('highlight');
                             }, 1500);
                         }
                     }
